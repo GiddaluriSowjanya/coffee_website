@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="coffee.css"/>
+    <script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .section {
+            display: none;
+        }
+        .section.active {
+            display: block;
+        }
+    </style>
+    <script>
+        function display(sectionId) {
+            // Hide all sections
+            var sections = document.querySelectorAll('.section');
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+            
+            // Show the selected section
+            var activeSection = document.getElementById(sectionId);
+            if (activeSection) {
+                activeSection.classList.add('active');
+            }
+        }
+    </script>
+</head>
+<body>
+    <!--navbar section-->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+            <div class="container">
+                <h1>
+                    <a class="navbar-brand d-flex align-items-center" href="#">
+                        <img src="coffee_folder/logo.png"  alt="" />
+                        <span class="mt-2">Cafephile</span>
+                    </a>
+                </h1>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" id="customItem" href="#sectionHome" onclick="display('sectionHome')">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="customItem1" href="#sectionAbout" onclick="display('sectionAbout')">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="customItem2" href="#sectionMenu" onclick="display('sectionMenu')">Menu</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#pages" id="customItem3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Pages
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Blog posts</a>
+                                <a class="dropdown-item" href="#">Blog Single</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " id="customItem4" href="#sectionContact" onclick="display('sectionContact')" aria-disabled="true">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="input-group ml-3">
+                        <input type="text" class="form-control" placeholder="Enter Keyword" aria-label="Search">
+                        <div>
+                            <span class="input-group-text"><i class="icon bi bi-search"></i></span>
+                        </div>
+                    </div>
+                    <i class="bi bi-moon-fill ml-2"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--navbar section -->
+   <section id="sectionHome" class="section active">
+        <!-- banner section-->
+        <div>
+            <div class="bg-banner-section d-flex flex-column justify-content-center">
+                <div class="text-center">
+                    <h4 class="banner-section-heading mb-3">
+                        Life Begins <span>After Coffee</span>
+                    </h4>
+                    <p class="banner-section-paragraph mb-3">
+                        Irferendis repudandae fugia rchitecto beatae rederit svitae recusa ndae debitifacere
+                    </p>
+                    <button class="banner-section-buttoncover">
+                        Read More
+                    </button>   
+                </div>
+            </div>
+        </div>
+        <!-- banner section -->
+        <div style="margin: 8px auto; display: block; text-align:center;">
+
+        </div>
+        <!-- About section -->
+        <div class="bg-about pb-5 pt-5">
+            <div class="container py-md-5 py-4">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 pr-lg-5">
+                        <h5 class="logo-heading"><i class="about-logo-image fas fa-mug-hot"></i>About Us</h5>
+                        <h1 class="about-heading">There Is All About Cafephile</h1>
+                        <p class="about-paragraph">
+                            "Coffee is a popular beverage made from roasted coffee beans, as espresso, latte, and cold brew, and enjoyed globally."
+                        </p>
+                        <img src="coffee_folder/sign.png" class="img-fluid mt-md-5 mt-4 img-dark-color"/>
+                    </div>
+        
+                    
+                    <div class="col-lg-6 mt-lg-0 mt-5">
+                        <div class="row">
+                            <div class="col-sm-6 grids-1">
+                                <i class="fas fa-coffee"></i>
+                                <h4 class="title-head my-2">Awesome Aroma</h4>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit oluptatem accusantium doloremque
+                                    ladase.</p>
+                            </div>
+                            <div class="col-sm-6 grids-1 mt-sm-0 mt-4">
+                                <i class="far fa-lemon"></i>
+                                <h4 class="title-head my-2">Bean Varieties</h4>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit oluptatem accusantium doloremque
+                                    ladase.</p>
+                            </div>
+                            <div class="col-sm-6 grids-1 mt-sm-5 mt-4">
+                                <i class="far fa-thumbs-up"></i>
+                                <h4 class="title-head my-2">High Quality</h4>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit oluptatem accusantium doloremque
+                                    ladase.</p>
+                            </div>
+                            <div class="col-sm-6 grids-1 mt-sm-5 mt-4">
+                                <i class="fas fa-seedling"></i>
+                                <h4 class="title-head my-2">Pure Grades</h4>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit oluptatem accusantium doloremque
+                                    ladase.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About section -->
+        <div style="margin: 8px auto; display: block; text-align:center;">
+
+        </div>
+        <!--menu section -->
+        <div>
+            <div class="d-flex flex-column justify-content-center">
+                <div class="container py-md-5 py-4">
+                    <div class="text-center mb-lg-5 mb-4">
+                        <h5 class="bg-exploremenu-card-heading"><i class="menu-logo fas fa-mug-hot"></i>Cafephile Menu</h5>
+                        <h3 class="menu-style">Our special Menu</h3>
+                    </div>
+                
+            
+                    <div class="bg-exploremenu-container pt-3 pb-3" id="exploremenusection">
+                                <div class="col-12 mb-3">
+                                    <div class="shadow explore-section-card p-3 d-flex flex-row">
+                                        <img src="coffee_folder/icons8-image-80.png" class="explore-section-card-image ml-2" />
+                                        <div class="ml-5">
+                                            <h1 class="explore-section-heading"> Americano Super Hot Coffee </h1>
+                                            <p>Sed ut perspiciatis unde omnis iste natus error sit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="shadow explore-section-card p-3 d-flex flex-row">
+                                        <img src="coffee_folder/icons8-image-80.png" class="explore-section-card-image ml-2" />
+                                        <div class="ml-5">
+                                            <h1 class="explore-section-heading"> Special Raw Coffee </h1>
+                                            <p>Sed ut perspiciatis unde omnis iste natus error sit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="shadow explore-section-card p-3 d-flex flex-row">
+                                        <img src="coffee_folder/icons8-image-80.png" class="explore-section-card-image ml-2" />
+                                        <div class="ml-5">
+                                            <h1 class="explore-section-heading"> Standard Black Coffee </h1>
+                                            <p>Sed ut perspiciatis unde omnis iste natus error sit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="shadow explore-section-card p-3 d-flex flex-row">
+                                        <img src="coffee_folder/icons8-image-80.png" class="explore-section-card-image ml-2" />
+                                        <div class="ml-5">
+                                            <h1 class="explore-section-heading"> Caramel Macchiato </h1>
+                                            <p>Sed ut perspiciatis unde omnis iste natus error sit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="shadow explore-section-card p-3 d-flex flex-row">
+                                        <img src="coffee_folder/icons8-image-80.png" class="explore-section-card-image ml-2" />
+                                        <div class="ml-5">
+                                            <h1 class="explore-section-heading"> Espresso Macchiato </h1>
+                                            <p>Sed ut perspiciatis unde omnis iste natus error sit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- menu section -->
+        <div style="margin: 8px auto; display: block; text-align:center;"></div>
+    
+        <!--- content section-->
+        <div class="container-1">
+        
+            <div class="sub-1-content">
+            <p class="content-para">Time to discover</p>
+            <h2 class="content-heading2">WHY WE ARE UNIQUE. HAVE A LOOK</h2>
+            </div>
+        
+            <div class="sub-con-2">
+                <div class="card-back">
+                    <img  src="coffee_folder/a1.jpg" class="sub-img-coffee">
+                    <h4 class="content-heading44">Happy Customer</h4>
+                </div>
+            <div class="card-back">
+                    <img src="coffee_folder/a2.jpg" class="sub-img-coffee">
+                    <h4 class="content-heading44">Best MasterChefs</h4>
+                </div>
+                <div class="card-back">
+                    <img src="coffee_folder/a3.jpg" class="sub-img-coffee">
+                    <h4 class="content-heading44">Awesome Coffee</h4>
+                </div>
+            </div>
+
+        </div>
+
+
+        
+        <!--content section-->
+
+        <!-- image with content section -->
+        <div class=" pt-lg-2">
+            <div class="py-5">
+                <div class="container py-md-5 py-4">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 left-wthree-img pr-lg-5">
+                            <div class="position-relative">
+                                <img src="coffee_folder/ab1.jpg" alt="" class="img-fluid radius-image-full">
+                                <div class="bg-shape"> </div>
+                                <div class="imginfo__box">
+                                    <div class="imginfo__info">
+                                        <h6 class="imginfo__title">25+</h6>
+                                        <p class="mt-1">Years of <br>Experience. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mt-lg-0 mt-5 about-right-faq align-self">
+                            <h5 class="sub-title mb-2"><i class="fas fa-mug-hot"></i> Good Time</h5>
+                            <h3 class="title-style">Coffee make us fresh & Active</h3>
+                            <h4 class="mt-4">Over 25 years, We make with Love.
+                            </h4>
+                            <p class="mt-4">Lorem ipsum viverra feugiat. Pellen tesque libero ut justo,
+                                ultrices in ligula. Semper at tempufddfel. Lorem ipsum dolor sit amet consectetur
+                                adipisicing
+                                elit. Non quae, fugiat consequatur oluptatem ad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //image with content section -->
+        
+        <!--testimoinals-->
+        <div class="test-bg py-5">
+            <div class="container py-md-5 py-4">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="text-center mb-lg-5 mb-4">
+                            <h5 class="test-sub-title text-white"><i class="fas fa-mug-hot text-white"></i>Client Testimonial</h5>
+                            <h3 class="test-style text-white">What client say something about<br>our Cafephile</h3>
+                        </div>
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicatoors" data-slide-to="0" class="active"></li>
+                                <li data-target = "#carouselExampleIndicatoors" data-slide-to="1"></li>
+                                <li data-target = "#carouselExampleIndicatoors" data-slide-to="2"></li>
+                            
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-3 ">
+                                            <a href="#url" class="testi-img">
+                                                <img src="coffee_folder/testi1.jpg" alt="" class="img-fluid"/>
+                                            </a>
+                                            <div class="align-self">
+                                                <h3>Dennis wilson</h3>
+                                                <p>customer</p>
+                                            </div>
+                                        </div>    
+                                        <div class="col-md-9 pl-lg-5 mt-md-0 mt-4 text-left">
+                                            <blockquote>
+                                                <q>Lorem ipsum dolor sit amet int consectetur adipisicing elit. Velita
+                                                    beatae
+                                                    laudantium Quas minima sunt natus tempore, maiores aliquid modi felis
+                                                    sequi optio lacinia id ipsum non velit, culpa.
+                                                    voluptate rem ullam dolore nisi est quasi, doloribus tempora.
+                                                    est elit. Non quae, fugiat ad libero justo sed amet.</q>
+                                            </blockquote>
+                                        </div>
+                                    </div>  
+                                </div>
+                                <div class="carousel-item active">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-3 ">
+                                            <a href="#url" class="testi-img">
+                                                <img src="coffee_folder/testi2.jpg" alt="" class="img-fluid"/>
+                                            </a>
+                                            <div class="align-self">
+                                                <h3>Dennis wilson</h3>
+                                                <p>customer</p>
+                                            </div>
+                                        </div>    
+                                        <div class="col-md-9 pl-lg-5 mt-md-0 mt-4 text-left">
+                                            <blockquote>
+                                                <q>Lorem ipsum dolor sit amet int consectetur adipisicing elit. Velita
+                                                    beatae
+                                                    laudantium Quas minima sunt natus tempore, maiores aliquid modi felis
+                                                    sequi optio lacinia id ipsum non velit, culpa.
+                                                    voluptate rem ullam dolore nisi est quasi, doloribus tempora.
+                                                    est elit. Non quae, fugiat ad libero justo sed amet.</q>
+                                            </blockquote>
+                                        </div>
+                                    </div>  
+                                </div>
+                                <div class="carousel-item active">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-3 ">
+                                            <a href="#url" class="testi-img">
+                                                <img src="coffee_folder/testi3.jpg" alt="" class="img-fluid"/>
+                                            </a>
+                                            <div class="align-self">
+                                                <h3>Dennis wilson</h3>
+                                                <p>customer</p>
+                                            </div>
+                                        </div>    
+                                        <div class="col-md-9 pl-lg-5 mt-md-0 mt-4 text-left">
+                                            <blockquote>
+                                                <q>Lorem ipsum dolor sit amet int consectetur adipisicing elit. Velita
+                                                    beatae
+                                                    laudantium Quas minima sunt natus tempore, maiores aliquid modi felis
+                                                    sequi optio lacinia id ipsum non velit, culpa.
+                                                    voluptate rem ullam dolore nisi est quasi, doloribus tempora.
+                                                    est elit. Non quae, fugiat ad libero justo sed amet.</q>
+                                            </blockquote>
+                                        </div>
+                                    </div>  
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!--testimonial section-->
+
+        <!--blog section-->
+        <div>
+            <div>
+                <div class="pb-5 pt-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 text-center mb-5">
+                                <h5 class="blogs-heading"><i class="fas fa-mug-hot"></i>News & Blog</h5>
+                                <p class="blogs-Paragraph">Latest News & Blog</p>
+                            </div>
+                            <div class="col-12 mb-4 col-md-6">
+                                <div class="shadow blog-card p-3">
+                                    <h1 class="blog-card-heading"> Hello World!</h1>
+                                    <div class="d-flex flex-row justify-content-center mt-5">
+                                        <h5 class="blog-subcard-heading"><img src="coffee_folder/multiple-users-silhouette_33308.png" class="blog-image"/>WsLayouts</h5>
+                                        <h5 class="blog-subcard-heading ml-5"><img src="coffee_folder/calendar_2886665.png" class="blog-image"/>August 16, 2022</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-4 col-md-6">
+                                <div class="shadow blog-card p-3">
+                                    <h1 class="blog-card-heading">Histroy of Coffee</h1>
+                                    <div class="d-flex flex-row justify-content-center mt-5">
+                                        <h5 class="blog-subcard-heading"><img src="coffee_folder/multiple-users-silhouette_33308.png" class="blog-image"/>WsLayouts</h5>
+                                        <h5 class="blog-subcard-heading ml-5"><img src="coffee_folder/calendar_2886665.png" class="blog-image"/>August 16, 2022</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--blog section-->
+
+        <!--footer-->
+        <footer class="footer-section py-5">
+            <div class="footer-overlay">
+                <div class="container pt-md-4">
+                    <div class="end-column mx-auto mb-5 pb-lg-4 text-center" style="max-width:550px">
+                        <h3 class="big-text mb-3">Coffee Build your Fresh mind</h3>
+                        <form action="#" class="subscribe" method="post">
+                            <input type="email" name="email" class="form-input" placeholder="Email Address" required="">
+                            <button class="btn btn-warning form-button">Subscribe Now</button>
+                        </form>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 pr-lg-5">
+                            <a class="footer-logo d-flex align-items-center" href="index.html">
+                                <img src="coffee_folder/logo.png" alt=""><span class="mt-2 cafe-text">Cafephile</span></a>
+                            <p class="mt-3 cafe-para">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo
+                                minus id quod maxime placeat facere. Iste natus error sit oluptatem accusantium doloremque
+                                ladase.</p>
+                            <div class="columns-2 mt-4">
+                                <ul class="social d-flex flex-row">
+                                    <li class="icon-foo"><a href="#facebook"><i class="fab fa-facebook-f text-white"></i></a>
+                                    </li>
+                                    <li class="icon-foo"><a href="#linkedin"><i class="fab fa-linkedin-in text-white ml-3"></i></a>
+                                    </li>
+                                    <li class="icon-foo"><a href="#twitter"><i class="fab fa-twitter icon-foo text-white ml-3"></i></a>
+                                    </li>
+                                    <li class="icon-foo"><a href="#google"><i class="fab fa-google-plus-g text-white ml-3"></i></a>
+                                    </li>
+                                    <li class="icon-foo"><a href="#github"><i class="fab fa-github text-white ml-3"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mt-lg-0 mt-3">
+                            <div class="row">
+                                <div class="col-xl-5 col-6 column">
+                                    <ul class="footer-gd-16 text-white">
+                                        <li class="icon-foo mb-2">August 2022</li>
+                                        <li class="icon-foo mb-2">March 2022</li>
+                                        <li class="icon-foo mb-2">August 2022</li>
+                                        <li class="icon-foo mb-2">Coffee</li>
+                                        <li class="icon-foo">Uncategorized</li>
+                                    </ul>
+                                </div>
+                                <div class="col-xl-5 col-6 column pl-lg-0">
+                                    <h3 class="mt-lg-3 con-text">Contact Info</h3>
+                                    <ul class="text-white">
+                                        <li class="icon-foo">10001, 5th Avenue,
+                                            #32841 block, USA</li>
+                                        <li class="mt-2 icon-foo">+1223 456 790</li>
+                                        <li class="mt-2 icon-foo">info@example.com</li>
+                                        <li class="mt-2 icon-foo">www.example.com</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-7 col-8 column mt-lg-0 mt-2 pl-xl-0">
+                            <h3 class="mt-lg-3 con-text">Opening Hours</h3>
+                            <ul class="list-footer-block">
+                                <li class="icon-foo text-white">
+                                    Monday
+                                    <span>  9:00 - 18:00</span>
+                                </li>
+                                <li class="icon-foo text-white">
+                                    tuesday
+                                    <span>  10:00 - 18:00</span>
+                                </li>
+                                <li class="icon-foo text-white">
+                                    Wednesday
+                                    <span>8:00 - 18:00</span>
+                                </li>
+                                <li class="icon-foo text-white">
+                                    Thursday
+                                    <span>10:00 - 18:00</span>
+                                </li>
+                                <li class="icon-foo text-white">
+                                    Friday
+                                    <span>11:00 - 18:00</span>
+                                </li>
+                                <li class="icon-foo text-white">
+                                    Saturday
+                                    <span>12:00 - 18:00</span>
+                                </li>
+                                <li class="icon-foo text-white">
+                                    Sunday
+                                    <span>closed</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="below-section text-center pt-4 mt-4">
+                        <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+                        <p class="copy-text">&copy; 2021 Cafephile. All rights reserved. Design by <a
+                                href="https://w3layouts.com/" target="_blank"> W3Layouts</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--//footer-->
+    </section>
+    <!--home section-->
+
+
+    <!--about section-->
+    <section id="sectionAbout" class="section">
+        <!--inner banner-->
+        <div class="inner-banner py-lg-5 py-sm-4 py-2">
+            <div class="w3l-breadcrumb py-5">
+                <div class="container py-xl-5 py-md-4 mt-5">
+                    <h4 class="inner-text-title font-weight-bold mb-sm-2">About Us</h4>
+                    <h1 class="inner-title">Home <span class="inner-span"> > About Page</span></h1>
+                </div>
+            </div>
+        </div>
+        <!--inner banner-->
+        <div style="margin: 8px auto; display: block; text-align:center;"></div>
+        
+        <!--image with content section-->
+        <div class=" pt-lg-2">
+            <div class="py-5">
+                <div class="container py-md-5 py-4">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 left-wthree-img pr-lg-5">
+                            <div class="position-relative">
+                                <img src="coffee_folder/ab1.jpg" alt="" class="img-fluid radius-image-full">
+                                <div class="bg-shape"> </div>
+                                <div class="imginfo__box">
+                                    <div class="imginfo__info">
+                                        <h6 class="imginfo__title">25+</h6>
+                                        <p class="mt-1">Years of <br>Experience. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mt-lg-0 mt-5 about-right-faq align-self">
+                            <h5 class="sub-title mb-2"><i class="fas fa-mug-hot"></i> Good Time</h5>
+                            <h3 class="title-style">Coffee make us fresh & Active</h3>
+                            <h4 class="mt-4">Over 25 years, We make with Love.
+                            </h4>
+                            <p class="mt-4">Lorem ipsum viverra feugiat. Pellen tesque libero ut justo,
+                                ultrices in ligula. Semper at tempufddfel. Lorem ipsum dolor sit amet consectetur
+                                adipisicing
+                                elit. Non quae, fugiat consequatur oluptatem ad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--image with content-->
+        <div style="margin: 8px auto; display: block; text-align:center;"></div>
+
+        <!--stats-->
+
+        <div class="pb-5 pt-4">
+            <div class="container pb-md-5 pb-5">
+                <div class="text-center">
+                    <div class="row">
+                        <div class="col-md-3 col-6">
+                            <div class="counter">
+                                <i class="fas fa-smile-beam"></i>
+                                <h1 class="font-weight-bold">15,897</h1>
+                                <p class="count-text">Happy Customers</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div>
+                                <i class="fas fa-users"></i>
+                                <h1 class="font-weight-bold">346</h1>
+                                <p class="count-text">master chef's</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6 mt-md-0 mt-5">
+                            <div>
+                                <i class="fas fa-store"></i>
+                                <h1 class="font-weight-bold">134</h1>
+                                <p class="count-text">branches</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6 mt-md-0 mt-5">
+                            <div>
+                                <i class="fas fa-medal"></i>
+                                <h1 class="font-weight-bold">4,633</h1>
+                                <p class="count-text">Awards Won</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="margin: 8px auto; display: block; text-align:center;"></div>
+
+        <!--bg with video icon-->
+        <div class="bg-video-container d-flex flex-column justify-content-center text-center">
+            <h1 class="bg-video-heading">We offer you the best coffee product</h1>
+        </div>
+        <!--about coffee section-->
+        <div class="py-5">
+            <div class="container py-md-5 py-4">
+                <div class="row align-items-center">
+                    <div class="col-lg-6  mb-lg-0 mb-5">
+                        <img class="img-fluid img-responsive" src="coffee_folder/lightbox-still-life-arrangement.jpg" alt=" ">
+                    </div>
+                    <div class="col-lg-6 align-self pl-lg-5">
+                        <h3 class="title-style">We have <span>25+</span> years of experience give you best Coffee!</h3>
+                        <p class="mt-2">Lorem ipsum viverra feugiat. Pellen tesque libero ut justo,
+                            ultrices in ligula. Semper at tempufddfel.</p>
+                        <div class="mt-5">
+                            <div class="d-flex">
+                                <div class="mr-2">
+                                    <i class="fas fa-coffee icon-style-ab-coff"></i>
+                                </div>
+                                <div class="about-detail">
+                                    <h4> There is all about our Cafephile</h4>
+                                    <p>Sed ut perspiciatis unde omnis iste natus error sit accusantium</p>
+                                </div>
+                            </div>
+                            <div class="d-flex mt-4">
+                                <div class="icon-style-ab-coff mr-2">
+                                    <i class="fab fa-canadian-maple-leaf"></i>
+                                </div>
+                                <div class="about-detail">
+                                    <h4> This is followed by the grinding</h4>
+                                    <p>Sed ut perspiciatis unde omnis iste natus error sit accusantium</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--about coffee section-->
+            
+        <!--about testimoinals-->
+        <div class="test-bg py-5">
+            <div class="container py-md-5 py-4">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="text-center mb-lg-5 mb-4">
+                            <h5 class="test-sub-title text-white"><i class="fas fa-mug-hot text-white"></i>Client Testimonial</h5>
+                            <h3 class="test-style text-white">What client say something about<br>our Cafephile</h3>
+                        </div>
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicatoors" data-slide-to="0" class="active"></li>
+                                <li data-target = "#carouselExampleIndicatoors" data-slide-to="1"></li>
+                                <li data-target = "#carouselExampleIndicatoors" data-slide-to="2"></li>
+                            
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-3 ">
+                                            <a href="#url" class="testi-img">
+                                                <img src="coffee_folder/testi1.jpg" alt="" class="img-fluid"/>
+                                            </a>
+                                            <div class="align-self">
+                                                <h3>Dennis wilson</h3>
+                                                <p>customer</p>
+                                            </div>
+                                        </div>    
+                                        <div class="col-md-9 pl-lg-5 mt-md-0 mt-4 text-left">
+                                            <blockquote>
+                                                <q>Lorem ipsum dolor sit amet int consectetur adipisicing elit. Velita
+                                                    beatae
+                                                    laudantium Quas minima sunt natus tempore, maiores aliquid modi felis
+                                                    sequi optio lacinia id ipsum non velit, culpa.
+                                                    voluptate rem ullam dolore nisi est quasi, doloribus tempora.
+                                                    est elit. Non quae, fugiat ad libero justo sed amet.</q>
+                                            </blockquote>
+                                        </div>
+                                    </div>  
+                                </div>
+                                <div class="carousel-item active">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-3 ">
+                                            <a href="#url" class="testi-img">
+                                                <img src="coffee_folder/testi2.jpg" alt="" class="img-fluid"/>
+                                            </a>
+                                            <div class="align-self">
+                                                <h3>Dennis wilson</h3>
+                                                <p>customer</p>
+                                            </div>
+                                        </div>    
+                                        <div class="col-md-9 pl-lg-5 mt-md-0 mt-4 text-left">
+                                            <blockquote>
+                                                <q>Lorem ipsum dolor sit amet int consectetur adipisicing elit. Velita
+                                                    beatae
+                                                    laudantium Quas minima sunt natus tempore, maiores aliquid modi felis
+                                                    sequi optio lacinia id ipsum non velit, culpa.
+                                                    voluptate rem ullam dolore nisi est quasi, doloribus tempora.
+                                                    est elit. Non quae, fugiat ad libero justo sed amet.</q>
+                                            </blockquote>
+                                        </div>
+                                    </div>  
+                                </div>
+                                <div class="carousel-item active">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-3 ">
+                                            <a href="#url" class="testi-img">
+                                                <img src="coffee_folder/testi3.jpg" alt="" class="img-fluid"/>
+                                            </a>
+                                            <div class="align-self">
+                                                <h3>Dennis wilson</h3>
+                                                <p>customer</p>
+                                            </div>
+                                        </div>    
+                                        <div class="col-md-9 pl-lg-5 mt-md-0 mt-4 text-left">
+                                            <blockquote>
+                                                <q>Lorem ipsum dolor sit amet int consectetur adipisicing elit. Velita
+                                                    beatae
+                                                    laudantium Quas minima sunt natus tempore, maiores aliquid modi felis
+                                                    sequi optio lacinia id ipsum non velit, culpa.
+                                                    voluptate rem ullam dolore nisi est quasi, doloribus tempora.
+                                                    est elit. Non quae, fugiat ad libero justo sed amet.</q>
+                                            </blockquote>
+                                        </div>
+                                    </div>  
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!--about testimonials-->
+
+
+        <!--about team-->
+        <div class="py-5">
+            <div class="container py-md-5 py-4">
+                <div class="text-center mb-lg-5 mb-4">
+                    <h5 class="sub-title"><i class="fas fa-mug-hot"></i> Meet Our Team</h5>
+                    <h3 class="title-style">Our Amazing Chef's</h3>
+                </div>
+                <div class="row text-center justify-content-center">
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="teams-card shadow">
+                            <img src="coffee_folder/portrait-indigenous-person-integrated-into-modern-life.jpg" class="image-fluid img-responsive team-image"/>
+                            <div class="team-title pt-3">
+                                <h5 class="team-heading">Shona Leer</h5>
+                                <span class="team-span">Masterchef</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mt-sm-0 mt-4">
+                        <div class="teams-card shadow">
+                            <img src="coffee_folder/stylish-young-woman-enjoying-coffee.jpg" class="image-fluid img-responsive team-image"/>
+                            <div class="team-title pt-3">
+                                <h5 class="team-heading">Brock Lee</h5>
+                                <span class="team-span">Manager</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mt-lg-0 mt-4">
+                        <div class="teams-card shadow">
+                            <img src="coffee_folder/smiling-waitress-white-t-shirt-brown-apron-holding-pot-take-away-cup-hands.jpg" class="image-fluid img-responsive team-image"/>
+                            <div class="team-title pt-3">
+                                <h5 class="team-heading">Maya Didas</h5>
+                                <span class="team-span">Barista</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--about team-->
+       
+        <!--footer-->
+        <footer class="footer-section py-5">
+            <div class="footer-overlay">
+                <div class="container pt-md-4">
+                    <div class="end-column mx-auto mb-5 pb-lg-4 text-center" style="max-width:550px">
+                        <h3 class="big-text mb-3">Coffee Build your Fresh mind</h3>
+                        <form action="#" class="subscribe" method="post">
+                            <input type="email" name="email" class="form-input" placeholder="Email Address" required="">
+                            <button class="btn btn-warning form-button">Subscribe Now</button>
+                        </form>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 pr-lg-5">
+                            <a class="footer-logo d-flex align-items-center" href="index.html">
+                                <img src="coffee_folder/logo.png" alt=""><span class="mt-2 cafe-text">Cafephile</span></a>
+                            <p class="mt-3 cafe-para">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo
+                                minus id quod maxime placeat facere.</p>
+                            <div class="columns-2 mt-4">
+                                <ul class="social d-flex flex-row">
+                                    <li class="icon-foo"><a href="#facebook"><i class="fab fa-facebook-f text-white"></i></a>
+                                    </li>
+                                    <li class="icon-foo"><a href="#linkedin"><i class="fab fa-linkedin-in text-white ml-3"></i></a>
+                                    </li>
+                                    <li class="icon-foo"><a href="#twitter"><i class="fab fa-twitter icon-foo text-white ml-3"></i></a>
+                                    </li>
+                                    <li class="icon-foo"><a href="#google"><i class="fab fa-google-plus-g text-white ml-3"></i></a>
+                                    </li>
+                                    <li class="icon-foo"><a href="#github"><i class="fab fa-github text-white ml-3"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mt-lg-0 mt-3">
+                            <div class="row">
+                                <div class="col-xl-5 col-6 column">
+                                    <ul class="footer-gd-16 text-white">
+                                        <li class="icon-foo mb-2">August 2022</li>
+                                        <li class="icon-foo mb-2">March 2022</li>
+                                        <li class="icon-foo mb-2">August 2022</li>
+                                        <li class="icon-foo mb-2">Coffee</li>
+                                        <li class="icon-foo">Uncategorized</li>
+                                    </ul>
+                                </div>
+                                <div class="col-xl-5 col-6 column pl-lg-0">
+                                    <h3 class="mt-lg-3 con-text">Contact Info</h3>
+                                    <ul class="text-white">
+                                        <li class="icon-foo">10001, 5th Avenue,
+                                            #32841 block, USA</li>
+                                        <li class="mt-2 icon-foo">+1223 456 790</li>
+                                        <li class="mt-2 icon-foo">info@example.com</li>
+                                        <li class="mt-2 icon-foo">www.example.com</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-7 col-8 column mt-lg-0 mt-2 pl-xl-0">
+                            <h3 class="mt-lg-3 con-text">Opening Hours</h3>
+                            <ul class="list-footer-block">
+                                <li class="icon-foo text-white">
+                                    Monday
+                                    <span>  9:00 - 18:00</span>
+                                </li>
+                                <li class="icon-foo text-white">
+                                    tuesday
+                                    <span>  10:00 - 18:00</span>
+                                </li>
+                                <li class="icon-foo text-white">
+                                    Wednesday
+                                    <span>8:00 - 18:00</span>
+                                </li>
+                                <li class="icon-foo text-white">
+                                    Thursday
+                                    <span>10:00 - 18:00</span>
+                                </li>
+                                <li class="icon-foo text-white">
+                                    Friday
+                                    <span>11:00 - 18:00</span>
+                                </li>
+                                <li class="icon-foo text-white">
+                                    Saturday
+                                    <span>12:00 - 18:00</span>
+                                </li>
+                                <li class="icon-foo text-white">
+                                    Sunday
+                                    <span>closed</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="below-section text-center pt-4 mt-4">
+                        <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+                        <p class="copy-text">&copy; 2021 Cafephile. All rights reserved. Design by <a
+                                href="https://w3layouts.com/" target="_blank"> W3Layouts</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--//footer-->
+
+    </section>
+
+    <!--menu section-->
+    <section id="sectionMenu" class="section">
+        <!--inner banner-->
+        <div class="inner-banner py-lg-5 py-sm-4 py-2">
+            <div class="w3l-breadcrumb py-5">
+                <div class="container py-xl-5 py-md-4 mt-5">
+                    <h4 class="inner-text-title font-weight-bold mb-sm-2">Our Menu</h4>
+                    <h1 class="inner-title">Home <span class="inner-span"> > Our Menu</span></h1>
+                </div>
+            </div>
+        </div>
+        <!--inner banner--> 
+        <div style="margin: 8px auto; display: block; text-align:center;"></div>
+        <!--menu section -->
+        <div>
+            <div class="d-flex flex-column justify-content-center">
+                <div class="container py-md-5 py-4">
+                    <div class="text-center mb-lg-5 mb-4">
+                        <h3 class="menu-style font-weight-bold">Our Menu</h3>
+                    </div>
+                
+            
+                    <div class="bg-exploremenu-container pt-3 pb-3" id="exploremenusection">
+                                <div class="col-12 mb-3">
+                                    <div class="shadow explore-section-card p-3 d-flex flex-row">
+                                        <img src="coffee_folder/icons8-image-80.png" class="explore-section-card-image ml-2" />
+                                        <div class="ml-5">
+                                            <h1 class="explore-section-heading"> Americano Super Hot Coffee </h1>
+                                            <p>Sed ut perspiciatis unde omnis iste natus error sit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="shadow explore-section-card p-3 d-flex flex-row">
+                                        <img src="coffee_folder/icons8-image-80.png" class="explore-section-card-image ml-2" />
+                                        <div class="ml-5">
+                                            <h1 class="explore-section-heading"> Special Raw Coffee </h1>
+                                            <p>Sed ut perspiciatis unde omnis iste natus error sit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="shadow explore-section-card p-3 d-flex flex-row">
+                                        <img src="coffee_folder/icons8-image-80.png" class="explore-section-card-image ml-2" />
+                                        <div class="ml-5">
+                                            <h1 class="explore-section-heading"> Standard Black Coffee </h1>
+                                            <p>Sed ut perspiciatis unde omnis iste natus error sit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="shadow explore-section-card p-3 d-flex flex-row">
+                                        <img src="coffee_folder/icons8-image-80.png" class="explore-section-card-image ml-2" />
+                                        <div class="ml-5">
+                                            <h1 class="explore-section-heading"> Caramel Macchiato </h1>
+                                            <p>Sed ut perspiciatis unde omnis iste natus error sit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="shadow explore-section-card p-3 d-flex flex-row">
+                                        <img src="coffee_folder/icons8-image-80.png" class="explore-section-card-image ml-2" />
+                                        <div class="ml-5">
+                                            <h1 class="explore-section-heading"> Espresso Macchiato </h1>
+                                            <p>Sed ut perspiciatis unde omnis iste natus error sit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- menu section -->
+        <!--footer-->
+        <footer class="footer-section py-5">
+            <div class="footer-overlay">
+                <div class="container pt-md-4">
+                    <div class="end-column mx-auto mb-5 pb-lg-4 text-center" style="max-width:550px">
+                        <h3 class="big-text mb-3">Coffee Build your Fresh mind</h3>
+                        <form action="#" class="subscribe" method="post">
+                            <input type="email" name="email" class="form-input" placeholder="Email Address" required="">
+                            <button class="btn btn-warning form-button">Subscribe Now</button>
+                        </form>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 pr-lg-5">
+                            <a class="footer-logo d-flex align-items-center" href="index.html">
+                                <img src="coffee_folder/logo.png" alt="">
+                                <span class="mt-2 cafe-text">Cafephile</span>
+                            </a>
+                            <p class="mt-3 cafe-para">
+                                Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere.
+                            </p>
+                            <div class="columns-2 mt-4">
+                                <ul class="social d-flex flex-row">
+                                    <li class="icon-foo">
+                                        <a href="#facebook">
+                                            <i class="fab fa-facebook-f text-white"></i>
+                                        </a>
+                                    </li>
+                                    <li class="icon-foo">
+                                        <a href="#linkedin">
+                                            <i class="fab fa-linkedin-in text-white ml-3"></i>
+                                        </a>
+                                    </li>
+                                    <li class="icon-foo">
+                                        <a href="#twitter">
+                                            <i class="fab fa-twitter icon-foo text-white ml-3"></i>
+                                        </a>
+                                    </li>
+                                    <li class="icon-foo">
+                                        <a href="#google">
+                                            <i class="fab fa-google-plus-g text-white ml-3"></i>
+                                        </a>
+                                    </li>
+                                    <li class="icon-foo">
+                                        <a href="#github">
+                                            <i class="fab fa-github text-white ml-3"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mt-lg-0 mt-3">
+                            <div class="row">
+                                <div class="col-xl-5 col-6 column">
+                                    <ul class="footer-gd-16 text-white">
+                                        <li class="icon-foo mb-2">August 2022</li>
+                                        <li class="icon-foo mb-2">March 2022</li>
+                                        <li class="icon-foo mb-2">August 2022</li>
+                                        <li class="icon-foo mb-2">Coffee</li>
+                                        <li class="icon-foo">Uncategorized</li>
+                                    </ul>
+                                </div>
+                                <div class="col-xl-5 col-6 column pl-lg-0">
+                                    <h3 class="mt-lg-3 con-text">Contact Info</h3>
+                                    <ul class="text-white">
+                                        <li class="icon-foo">10001, 5th Avenue, #32841 block, USA</li>
+                                        <li class="mt-2 icon-foo">+1223 456 790</li>
+                                        <li class="mt-2 icon-foo">info@example.com</li>
+                                        <li class="mt-2 icon-foo">www.example.com</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-7 col-8 column mt-lg-0 mt-2 pl-xl-0">
+                            <h3 class="mt-lg-3 con-text">Opening Hours</h3>
+                            <ul class="list-footer-block">
+                                <li class="icon-foo text-white">
+                                    Monday <span>9:00 - 18:00</span>
+                                </li>
+                                <li class="icon-foo text-white">
+                                    Tuesday <span>10:00 - 18:00</span>
+                                </li>
+                                <li class="icon-foo text-white">
+                                    Wednesday <span>8:00 - 18:00</span>
+                                </li>
+                                <li class="icon-foo text-white">
+                                    Thursday <span>10:00 - 18:00</span>
+                                </li>
+                                <li class="icon-foo text-white">
+                                    Friday <span>11:00 - 18:00</span>
+                                </li>
+                                <li class="icon-foo text-white">
+                                    Saturday <span>12:00 - 18:00</span>
+                                </li>
+                                <li class="icon-foo text-white">
+                                    Sunday <span>Closed</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="below-section text-center pt-4 mt-4">
+                        <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+                        <p class="copy-text">
+                            &copy; 2021 Cafephile. All rights reserved. Design by 
+                            <a href="https://w3layouts.com/" target="_blank">W3Layouts</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <div style="margin: 8px auto; display: block; text-align:center;"></div>
+
+    </section>
+
+    <section id="sectionContact" class="section">
+        <!--inner banner-->
+        <div class="inner-banner py-lg-5 py-sm-4 py-2">
+            <div class="w3l-breadcrumb py-5">
+                <div class="container py-xl-5 py-md-4 mt-5">
+                    <h4 class="inner-text-title font-weight-bold mb-sm-2">Contact Us</h4>
+                    <h1 class="inner-title">Home <span class="inner-span"> > Contact Us</span></h1>
+                </div>
+            </div>
+        </div>
+        <!--inner banner--> 
+        <div style="margin: 8px auto; display: block; text-align:center;"></div>
+
+            <!---728x90--->
+        <!-- contact -->
+        <div class="bg-contacts py-5">
+            <div class="contact-top py-md-5 py-4">
+                <div class="container">
+                    <div class="text-center mb-lg-5 mb-4">
+                        <h5 class="sub-title"><i class="fas fa-mug-hot"></i> Get In Touch</h5>
+                        <h3 class="title-style">Contact Us</h3>
+                    </div>
+                    <div class="contacts12-main">
+                        <form action="https://sendmail.w3layouts.com/submitForm" method="post" class="main-input">
+                            <div class="top-inputs d-grid">
+                                <input type="text" placeholder="Name" name="w3lName" id="w3lName" required="">
+                                <input type="email" name="email" placeholder="Email" id="w3lSender" required="">
+                            </div>
+                            <input type="text" placeholder="Phone Number" name="w3lName" id="w3lName" required="">
+                            <textarea placeholder="Message" name="w3lMessage" id="w3lMessage" required=""></textarea>
+                            <button type="submit" class="btn btn-style btn-style-primary">Send Now</button>
+                        </form>
+                    </div>
+                    <div class="wrapper-full">
+                        <div class="line"></div>
+                        <h3 class="title-style text-center mb-4">Contact Info</h3>
+                        <div class="contact">
+                            <a href="/cdn-cgi/l/email-protection#f39b969f9f9cb3968b929e839f96dd909c9e">
+                                <p class="contact-text-sub"><span class="__cf_email__" data-cfemail="177f727b7b7857726f767a677b723974787a">[email&#160;protected]</span></p>
+                            </a>
+                            <a href="tel:+7-800-999-800">
+                                <p class="contact-text-sub">+7-800-999-800</p>
+                            </a>
+                            <p class="contact-text-sub">London,</p>
+                            <p class="contact-text-sub">75 West Rock, Maple Building</p>
+                            <div class="buttons-teams">
+                                <a href="#team"><span class="fab fa-facebook-square" aria-hidden="true"></span></a>
+                                <a href="#team"><span class="fab fa-twitter-square" aria-hidden="true"></span></a>
+                                <a href="#team"><span class="fab fa-google-plus-square" aria-hidden="true"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--contact-->
+
+        <!--location section-->
+        <div class="bg-map">
+            
+        </div>
+        <!--location section-->
+
+        <!--footer-->
+        <footer class="footer-section py-5">
+            <div class="footer-overlay">
+                <div class="container pt-md-4">
+                    <div class="end-column mx-auto mb-5 pb-lg-4 text-center" style="max-width:550px">
+                        <h3 class="big-text mb-3">Coffee Build your Fresh mind</h3>
+                        <form action="#" class="subscribe" method="post">
+                            <input type="email" name="email" class="form-input" placeholder="Email Address" required="">
+                            <button class="btn btn-warning form-button">Subscribe Now</button>
+                        </form>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 pr-lg-5">
+                            <a class="footer-logo d-flex align-items-center" href="index.html">
+                                <img src="coffee_folder/logo.png" alt="">
+                                <span class="mt-2 cafe-text">Cafephile</span>
+                            </a>
+                            <p class="mt-3 cafe-para">
+                                Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere.
+                            </p>
+                            <div class="columns-2 mt-4">
+                                <ul class="social d-flex flex-row">
+                                    <li class="icon-foo">
+                                        <a href="#facebook">
+                                            <i class="fab fa-facebook-f text-white"></i>
+                                        </a>
+                                    </li>
+                                    <li class="icon-foo">
+                                        <a href="#linkedin">
+                                            <i class="fab fa-linkedin-in text-white ml-3"></i>
+                                        </a>
+                                    </li>
+                                    <li class="icon-foo">
+                                        <a href="#twitter">
+                                            <i class="fab fa-twitter icon-foo text-white ml-3"></i>
+                                        </a>
+                                    </li>
+                                    <li class="icon-foo">
+                                        <a href="#google">
+                                            <i class="fab fa-google-plus-g text-white ml-3"></i>
+                                        </a>
+                                    </li>
+                                    <li class="icon-foo">
+                                        <a href="#github">
+                                            <i class="fab fa-github text-white ml-3"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mt-lg-0 mt-3">
+                            <div class="row">
+                                <div class="col-xl-5 col-6 column">
+                                    <ul class="footer-gd-16 text-white">
+                                        <li class="icon-foo mb-2">August 2022</li>
+                                        <li class="icon-foo mb-2">March 2022</li>
+                                        <li class="icon-foo mb-2">August 2022</li>
+                                        <li class="icon-foo mb-2">Coffee</li>
+                                        <li class="icon-foo">Uncategorized</li>
+                                    </ul>
+                                </div>
+                                <div class="col-xl-5 col-6 column pl-lg-0">
+                                    <h3 class="mt-lg-3 con-text">Contact Info</h3>
+                                    <ul class="text-white">
+                                        <li class="icon-foo">10001, 5th Avenue, #32841 block, USA</li>
+                                        <li class="mt-2 icon-foo">+1223 456 790</li>
+                                        <li class="mt-2 icon-foo">info@example.com</li>
+                                        <li class="mt-2 icon-foo">www.example.com</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-7 col-8 column mt-lg-0 mt-2 pl-xl-0">
+                            <h3 class="mt-lg-3 con-text">Opening Hours</h3>
+                            <ul class="list-footer-block">
+                                <li class="icon-foo text-white">
+                                    Monday <span>9:00 - 18:00</span>
+                                </li>
+                                <li class="icon-foo text-white">
+                                    Tuesday <span>10:00 - 18:00</span>
+                                </li>
+                                <li class="icon-foo text-white">
+                                    Wednesday <span>8:00 - 18:00</span>
+                                </li>
+                                <li class="icon-foo text-white">
+                                    Thursday <span>10:00 - 18:00</span>
+                                </li>
+                                <li class="icon-foo text-white">
+                                    Friday <span>11:00 - 18:00</span>
+                                </li>
+                                <li class="icon-foo text-white">
+                                    Saturday <span>12:00 - 18:00</span>
+                                </li>
+                                <li class="icon-foo text-white">
+                                    Sunday <span>Closed</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="below-section text-center pt-4 mt-4">
+                        <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+                        <p class="copy-text">
+                            &copy; 2021 Cafephile. All rights reserved. Design by 
+                            <a href="https://w3layouts.com/" target="_blank">W3Layouts</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        
+    </section>
+
+</body>
+</html>
